@@ -1,0 +1,69 @@
+#AUTHOR
+#https://github.com/Vict0rBit
+#t.me/victorbit
+#victormhgh@gmail.com
+#
+update_interval 1
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 1
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
+use_xft yes
+xftfont Droid Sans:size=9
+override_utf8_locale yes
+text_buffer_size 2048
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,sticky,skip_taskbar,skip_pager
+alignment top_right
+gap_x 0
+gap_y 30
+minimum_size 280 0
+default_bar_size 30 8
+draw_shades no
+default_color ffffff
+default_shade_color 000000
+color0 00d9ff
+color1 ff687b
+color2 c5c5c5
+color3 ff8400
+own_window_argb_visual yes
+own_window_colour 000000
+own_window_argb_value 0
+
+TEXT
+${goto 210}${color0}${font Zekton:style=bold:size=13}${voffset 40}Jimmy Neutron
+${voffset -45}${font Zekton:style=Bold:size=12}${color}${goto 40}Last Shutdown
+${goto 90}${color1}${font Zekton:style=Bold:size=12}${color1}${uptime}${color}${font}
+
+
+${voffset 10}${goto 0}${color3}${font Ubuntu:style=bold:size=15}Computers are fast ; ${goto 248}${color1}${font Zekton:style=bold:size=14}${acpitemp} ${color2}${font Zekton:style=bold:size=7} °C
+${voffset 7}${goto 0}${color3}${font Ubuntu:style=bold:size=12}developers keep them slow. ${voffset 30}${font}${color1}${goto 220}${font Zekton:style=Bold:size=11}CPU
+${goto 220}${font Zekton:style=Bold:size=11}${color1}${cpu cpu1}${color2}${font Zekton:style=bold:size=7} %
+${voffset 30}${font Zekton:style=Bold:size=11}${color1}${goto 82}Battery
+${goto 82}${color1}${font Zekton:style=Bold:size=15}${battery_percent} ${color2}${font Zekton:style=bold:size=7}%
+${voffset 33}${goto 28}${color1}${font Zekton:style=Bold:size=10}Total Mem${goto 113}Used Mem${font Zekton:style=Bold:size=10}${color1}${goto 200}Free Mem
+${goto 35}${color2}${font Zekton:style=Bold:size=9}${memmax}${goto 120}${mem} ${goto 210}${font Zekton:style=Bold:size=9}${memfree}
+${voffset 25}${color1}${font Zekton:style=Bold:size=9}${goto 83}Threads${goto 175}Machine
+${color2}${font Zekton:style=Bold:size=9}${goto 100}${running_threads}${goto 175}${machine}${color2}${font Zekton:style=bold:size=7}
+
+${voffset 35}${color2}Download Speed ${color0} ${goto 250}${downspeedf wlp2s0} KB/s
+${downspeedgraph wlp2s0 30,300 E7331A F16A16}
+${color2}Upload Speed ${color0}${goto 250}${upspeedf wlp2s0} KB/s 
+${upspeedgraph wlp2s0 30,300 F16A16 E7331A} 
+${color2}Random Access Memory ${color0} ${goto 250}${memperc} %
+${memgraph 30,300 E7331A F16A16}
+${color2}Central Processing Unit ${color0}${goto 250}${cpu} % 
+${cpugraph 30,300 F16A16 E7331A} 
+
+
+
+
+${image ~/.conky/victorConky1.1/victorConky/LinuxLarge.png -p 10,0}
+
+
+
+
